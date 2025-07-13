@@ -1,0 +1,40 @@
+name: Github-Contribution-Grid-Snake
+
+on:
+  schedule: # execute every 24 hours
+    - cron: "* */24 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
+      - name: generate github-contribution-grid-snake.svg
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            contribution-grid-snake/github-snake.svg
+            contribution-grid-snake/github-snake-dark.svg?palette=github-dark
+            contribution-grid-snake/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit files
+        run: |
+          git add contribution-grid-snake/
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GithubActions Bot"
+          git commit --allow-empty -m "update contribution-grid-snake" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: actions
+          github_token: ${{ secrets.GITHUB_TOKEN }}
