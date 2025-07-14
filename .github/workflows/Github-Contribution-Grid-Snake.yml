@@ -2,8 +2,9 @@ name: Github-Contribution-Grid-Snake
 
 on:
   schedule: # execute every 24 hours
-    - cron: "* */24 * * *"
-  workflow_dispatch:
+    # - cron: "* */24 * * *"
+    - cron: "00 16 * * *" # UTC+8 00:00
+  workflow_dispatch: 
 
 jobs:
   generate:
