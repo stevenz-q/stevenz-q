@@ -6,5 +6,5 @@
 
 ---
 
-[![](https://raw.githubusercontent.com/stevenz-q/stevenz-q/actions/contribution-grid-snake/github-snake-dark.svg)](https://github.com/stevenz-q)
-[![](https://raw.githubusercontent.com/stevenz-q/stevenz-q/actions/profile-summary-card-output/tokyonight/2-most-commit-language.svg)](https://github.com/stevenz-q) [![](https://raw.githubusercontent.com/stevenz-q/stevenz-q/actions/profile-summary-card-output/tokyonight/3-stats.svg)](https://github.com/stevenz-q)
+[![](https://raw.githubusercontent.com/stevenz-q/github-profile-actions/main/contribution-grid-snake/github-snake-dark.svg)](https://github.com/stevenz-q)
+[![](https://raw.githubusercontent.com/stevenz-q/github-profile-actions/main/profile-summary-card-output/tokyonight/2-most-commit-language.svg)](https://github.com/stevenz-q) [![](https://raw.githubusercontent.com/stevenz-q/stevenz-q/main/profile-summary-card-output/tokyonight/3-stats.svg)](https://github.com/stevenz-q)
